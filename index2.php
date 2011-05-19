@@ -8,5 +8,6 @@ sd
 asds
 master eklendi
 
+buda yeni
 <newfeautre dea eklendi">
 <mastera yeni eklendi>
