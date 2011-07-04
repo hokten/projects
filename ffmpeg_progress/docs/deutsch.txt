@@ -1,0 +1,89 @@
+##############################################
+ Dokumentation Deutsch
+##############################################
+ (C) 2010 by Snap-DaP.com / David-Kurz.de
+##############################################
+
+1. Lizenz
+2. Copyright
+3. Vorbereitende Schritte
+  3.1 Download
+  3.2 Entpacken
+  3.3 Konfiguration
+4. Benutzung
+  4.1 Erzeugen und Anzeigen der ProgressBar
+  4.2 JavaScript Template bearbeiten
+5. Support
+6. Systemvoraussetzungen
+
+===============================================
+                   1. Lizenz
+===============================================
+Bite die Lese die Datei "license.txt" für 
+Informationen zur Lizenz.
+
+===============================================
+                  2. Copyright
+===============================================
+Das Copyright für diese Software liegt bei:
+(C) 2010 by Snap-DaP.com 
+(C) 2010 by David-Kurz.de
+
+===============================================
+           3. Vorbereitende Schritte
+===============================================
+
+================= 3.1 Download ================
+Zuerst muss die Software heruntergeladen werden
+Beachten sollte man hier, dass man die neuste
+Version herunterlädt.
+
+Den Download findet man hier:
+http://sf.net/projects/ffmpegprogress/files/
+
+================= 3.2 Entpacken ===============
+Nach dem Download muss das Tar-Archiv entpackt 
+werden, damit man die Software nutzten kann.
+
+Das funktioniert mit folgendem einfachen Befehl
+tar xfv ffmpegprogress-0.1b.tar
+
+============== 3.3 Konfiguration ==============
+Nach dem Entpacken müssen die Einstellungen der 
+congig.inc.php Datei im Ordner /inc/ gesetzt
+werden.
+Weitere Information zu jeder Einstellung in der
+config.inc.php.
+
+
+===============================================
+                 4. Benutzung
+===============================================
+
+== 4.1 Erzeugen und Anzeigen der ProgressBar ==
+Eine ausführliche Anleitung zum Anzeigen und
+Erzeugen der ProgressBar unter: http://xe.lv/oj
+
+Ein Beispiel zur Anzeige in der index.php
+
+====== 4.2 JavaScript Template bearbeiten =====
+Alle Änderungen der "js-template" Datei sollten
+mit größter Sorgfalt gemacht werden, da es sein
+kann, dass nach dem Bearbeiten die Progressbar
+nicht mehr aktualisiert oder angezeigt wird.
+
+
+===============================================
+                  5. Support
+===============================================
+
+Support unter http://xe.lv/ok
+
+===============================================
+           6. Systemvoraussetzungen
+===============================================
+
+Diese Software funktioniert nur unter Linux!
+Linux 
+min. 512mb Ram (FFMPEG)
+installiertes PHP und FFMPEG

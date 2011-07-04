@@ -1,0 +1,60 @@
+<script language="JavaScript" src="{JS_PATH}jquery.js" type="text/javascript"></script>
+<script language="JavaScript" src="{JS_PATH}progressbar.js" type="text/javascript"></script>
+<script type="text/javascript">
+			var progress_key = '{rand}';
+			$(document).ready(function() {
+			$("#progressbar").progressBar();
+			startConvert();
+			});
+
+			function startConvert() {
+				$("#progressbar").fadeIn();
+				$("#status").fadeIn(500);
+				var i = setInterval(function() { 
+					$.getJSON("./inc/progress.php?pkey=" + progress_key, function(data) {
+						if (data == null) {
+							clearInterval(i);
+							$('#status').fadeOut(500);
+							$('#progressbar').html('<strong>{lang[LANG][1]}</strong>');
+							document.title = '{lang[LANG][2]}'; 	
+						
+						}
+
+						var pz = Math.floor(100 * parseInt(data.time_encoded) / parseInt(data.time_total));
+						document.title = '{lang[LANG][3]}'; 	
+						if(pz == 'Infinity'){
+							clearInterval(i);
+							$('#status').fadeOut(500);
+							$('#progressbar').html('<strong>{lang[LANG][1]}</strong>');
+							document.title = '{lang[LANG][2]}'; 	
+
+						}
+						
+						if(pz > 99){
+							document.title='{lang[LANG][4]}';				
+							clearInterval(i);
+							$.ajax({
+							  url: '{RE_FORM}?pkey=' + progress_key,
+							  type: 'GET',
+								beforeSend: function(){
+							    		$('#progressbar').fadeOut(500);
+							    		$('#status').fadeOut(500);
+							  	},
+								  success: function(getData) {
+								      $('#status').html(getData);
+								      $('#status').fadeIn(500);
+								  }
+							});
+						}
+						
+						$("#progressbar").progressBar(pz);
+						var encoded = data.time_encoded_min;
+						var total = data.time_total_min;
+						$("#time_cur").html(encoded);
+						$("#time_total").html(total);
+					});
+				}, {UPD_RATE});
+
+				return true;
+			}
+		</script>
