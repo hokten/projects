@@ -1,0 +1,4 @@
+Youtube'dan curl aracılığıyla video indirir. 
+İndirme işlemi boyunca yüklenen miktar, toplam miktar ve yüzde cinsinden tamamlanan miktar gibi 
+bilgileri anlık olarak sayfada gösterir.
+Aynı zamanda ilerleme çubuğu da mevcut.
