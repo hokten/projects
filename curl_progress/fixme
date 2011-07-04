@@ -1,0 +1,4 @@
+Bazen %99 da takıldığı oluyo. Dosyanın boyutu, dosya indirilmeden curl yardımıyla hesplanıyor. 
+Sistemdeki bir dosyanın boyutu,filesize() fonksiyonu yardımıyla hesaplanabilir. 
+Eğer dosya hatasız olarak indirildiyse bu iki değerin eşit olması gerekir. Dosyanın tam olarak inip
+inmediğine bu şekilde bakabilirsin.
