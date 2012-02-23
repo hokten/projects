@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+       <title></title>
+       <link rel="stylesheet" href="colorbox.css" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
+        <script type="text/javascript" src="jquery.form.js"></script>
+        <script src="jquery.colorbox.js"></script>
+	<script type="text/javascript" src="modular_form.js"></script>
+        <link rel="stylesheet" type="text/css" href="modular_form.css"/>
+		<script>
+			$(document).ready(function(){
+$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+$(".callbacks").colorbox({
+					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+				});
+				//Example of preserving a JavaScript event for inline calls.
+				$("#click").click(function(){ 
+					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+					return false;
+				});
+			});
+		</script>
+
+</head>
+<body>
+<p><a class='iframe' href="http://78.180.243.117/modform/dene.html">Outside Webpage (Iframe)</a></p>
+
+
+</body>
+</html>
+
